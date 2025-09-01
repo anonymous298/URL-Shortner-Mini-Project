@@ -9,7 +9,7 @@ const Redirect = ({fullurl}) => {
     router.push(fullurl)
   return (
     <div>
-      Redirecting to URL...
+      {/* Redirecting to URL... */}
     </div>
   )
 }
