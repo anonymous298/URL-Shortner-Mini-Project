@@ -56,6 +56,10 @@ const Page = () => {
 
     }
 
+    const deleteURL = (idx) => {
+        setUpdatedUrl(updatedUrl.filter((_, index) => index !== idx))
+    }
+
     return (
         <div className='w-full'>
             <div className="hero flex justify-center items-center mt-10">
@@ -70,7 +74,12 @@ const Page = () => {
                     <div className="shorten-urls-container p-4 flex flex-col gap-y-3">
                         {updatedUrl.map((value, idx) => {
                             return (
-                                <a key={idx} href={`/${value.shorturl}`} target='_blank' className='font-semibold text-[20px]'>{`/${value.shorturl}`}</a>
+                                <div className='flex justify-between'>
+
+                                    <a key={idx} href={`/${value.shorturl}`} target='_blank' className='font-semibold text-[20px]'>{`/${value.shorturl}`}</a>
+
+                                    <button onClick={() => deleteURL(idx)} className='font-bold bg-red-600 p-2 rounded-[10px] hover:bg-red-400 cursor-pointer'>delete</button>
+                                </div>
                             )
                         })}
                     </div>
