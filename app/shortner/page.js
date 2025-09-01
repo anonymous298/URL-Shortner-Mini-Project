@@ -13,7 +13,7 @@ const Page = () => {
         const fetchData = async () => {
             const res = await fetch('/api/add')
             const data = await res.json()
-            
+
             if (!updatedUrl[0]) {
                 setUpdatedUrl(data.data)
                 console.log(updatedUrl)
@@ -56,8 +56,20 @@ const Page = () => {
 
     }
 
-    const deleteURL = (idx) => {
+    const deleteFromDB = async (val) => {
+        let a = await fetch(`/api/add?id=${val._id}`,
+            {
+                method: "DELETE"
+            }
+        )
+
+        let res = await a.json();
+        console.log(res);
+    }
+
+    const deleteURL = (val, idx) => {
         setUpdatedUrl(updatedUrl.filter((_, index) => index !== idx))
+        deleteFromDB(val)
     }
 
     return (
@@ -78,7 +90,7 @@ const Page = () => {
 
                                     <a key={idx} href={`/${value.shorturl}`} target='_blank' className='font-semibold text-[20px]'>{`/${value.shorturl}`}</a>
 
-                                    <button  onClick={() => deleteURL(idx)} className='font-bold bg-red-600 p-2 rounded-[10px] hover:bg-red-400 cursor-pointer'>delete</button>
+                                    <button onClick={() => deleteURL(val, idx)} className='font-bold bg-red-600 p-2 rounded-[10px] hover:bg-red-400 cursor-pointer'>delete</button>
                                 </div>
                             )
                         })}
