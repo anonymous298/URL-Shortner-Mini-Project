@@ -6,9 +6,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="flex justify-center items-center">
-      <div className="container h-[70vh] flex mt-10">
-        <div className="about-product w-[50%] flex justify-center items-center flex-col p-2 gap-y-4">
-          <h2 className="text-black font-bold text-[30px]">The best URL shortner in the web</h2>
+      <div className="container h-[70vh] flex mt-10 max-[600px]:flex max-[600px]:justify-center max-[600px]:items-center">
+        <div className="about-product w-[50%] max-[600px]:w-[80%] flex justify-center items-center flex-col p-2 gap-y-4">
+          <h2 className="text-black font-bold text-[30px] text-center">The best URL shortner in the web</h2>
 
           <p className="text-center text-[#0A400C] font-semibold ">We are the most straightfoward URL Shortener in the world. Most of the url shorteners will track you or ask you to give your details for login. We understand your needs and hence we have created this URL shortener</p>
 
@@ -18,7 +18,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="display-img w-[50%] relative bg-transparent ">
+        <div className="display-img w-[50%] relative bg-transparent max-[600px]:hidden">
           <Image className="bg-transparent" alt="an Image of a vector" src={"/vector.png"} fill={true}    />
         </div>
       </div>
