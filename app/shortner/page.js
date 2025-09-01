@@ -50,6 +50,7 @@ const Page = () => {
 
         setUpdatedUrl([...updatedUrl, formValues]);
         submitData(formValues)
+        setFormValues({});
         // submitData()
         // console.log(updatedUrl)
 
