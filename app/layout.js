@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       > 
         <Navbar />
 
-        <div className="min-h-screen">
+        <div className="min-h-screen w-full">
 
           {children}
 
