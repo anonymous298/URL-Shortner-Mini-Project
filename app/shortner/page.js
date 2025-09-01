@@ -90,7 +90,7 @@ const Page = () => {
 
                                     <a key={idx} href={`/${value.shorturl}`} target='_blank' className='font-semibold text-[20px]'>{`/${value.shorturl}`}</a>
 
-                                    <button onClick={() => deleteURL(val, idx)} className='font-bold bg-red-600 p-2 rounded-[10px] hover:bg-red-400 cursor-pointer'>delete</button>
+                                    <button onClick={() => deleteURL(value, idx)} className='font-bold bg-red-600 p-2 rounded-[10px] hover:bg-red-400 cursor-pointer'>delete</button>
                                 </div>
                             )
                         })}
