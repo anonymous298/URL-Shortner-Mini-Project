@@ -57,9 +57,9 @@ const Page = () => {
     }
 
     return (
-        <div>
+        <div className='w-full'>
             <div className="hero flex justify-center items-center mt-10">
-                <div className="container w-[40vw] bg-[#C6D870] rounded-2xl">
+                <div className="container bg-[#C6D870] rounded-2xl w-[60%] max-[500px]:w-[80%] max-[400px]:w-[95%] ">
                     <h2 className='font-bold text-[22px] p-3'>Generate Your Short URLs</h2>
                     <div className="form-inputs flex flex-col justify-center items-center gap-y-2 mt-2 p-3">
                         <input type="text" name='fullurl' value={formValues.fullurl ? formValues.fullurl : ''} onChange={handleChange} className='bg-[#E1E9C9] w-[100%] p-2.5 rounded-2xl outline-[#556B2F] active:outline-2' />
