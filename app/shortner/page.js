@@ -57,9 +57,13 @@ const Page = () => {
     }
 
     const deleteFromDB = async (val) => {
-        let a = await fetch(`/api/add?id=${val._id}`,
+        let a = await fetch(`/api/delete/`,
             {
-                method: "DELETE"
+                method: "POST",
+                headers : {
+                    'Content-Type' : 'application/json'
+                },
+                body : JSON.stringify(val)
             }
         )
 
