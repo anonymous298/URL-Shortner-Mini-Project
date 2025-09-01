@@ -70,7 +70,7 @@ const Page = () => {
                     <div className="shorten-urls-container p-4 flex flex-col gap-y-3">
                         {updatedUrl.map((value, idx) => {
                             return (
-                                <a key={idx} href={`http://localhost:3000/${value.shorturl}`} target='_blank' className='font-semibold text-[20px]'>{`http://localhost:3000/${value.shorturl}`}</a>
+                                <a key={idx} href={`/${value.shorturl}`} target='_blank' className='font-semibold text-[20px]'>{`/${value.shorturl}`}</a>
                             )
                         })}
                     </div>
